@@ -65,10 +65,3 @@ spec:
             requests:
               cpu: 50m
               memory: 64Mi
-          volumeMounts:
-            - mountPath: /usr/share/nginx/html
-              name: page
-      volumes:
-        - name: page
-          persistentVolumeClaim:
-            claimName: nginx-efs-pvc  # Ensure this PVC exists in the nginx-space namespace
